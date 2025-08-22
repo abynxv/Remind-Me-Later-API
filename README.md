@@ -31,8 +31,14 @@ A simple Django REST Framework (DRF) API to create reminders. Each reminder belo
    ```bash
    python manage.py createsuperuser
    ```
-
-6. **Run the server:**
+6. **Create a test user (optional):**
+   ```bash
+   python manage.py shell
+   from django.contrib.auth.models import User
+   user = User.objects.create(username="abhi", password="123")
+   print(user.id)
+   ```
+7. **Run the server:**
    ```bash
    python manage.py runserver
    ```
